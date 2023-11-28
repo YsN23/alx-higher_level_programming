@@ -9,8 +9,8 @@ def uppercase(str):
             new_ascii = ascii_num - 32
             upper_char = chr(new_ascii)
             upper_string += upper_char
-            print("{}".format(upper_string))
 
         else:
             upper_string += char
-            print("{}".format(upper_string))
+
+    print("{}".format(upper_string))
