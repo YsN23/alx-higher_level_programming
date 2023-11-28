@@ -21,10 +21,5 @@ def fizzbuzz():
             print(f"Fizz", end=" ")
         elif i % 5 == 0:
             print(f"Buzz", end=" ")
-        elif i == 100:
-            print(f"")
         else:
             print("{}".format(i), end=" ")
-
-    print()
-fizzbuzz()
