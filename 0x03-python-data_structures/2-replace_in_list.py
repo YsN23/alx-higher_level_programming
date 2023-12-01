@@ -11,7 +11,7 @@ def replace_in_list(my_list, idx, element):
 
     for i in range(leght):
         if i == idx:
-            new_list[i] = new_list[i].replace(element)
+            new_list[i] = element
         else:
             new_list[i] = new_list[i]
 
