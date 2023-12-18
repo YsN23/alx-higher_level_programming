@@ -11,7 +11,7 @@ def safe_print_list_integers(my_list=[], x=0):
                 count += 1
             else:
                 continue
-    except ValueError and IndexError:
+    except IndexError:
         pass
 
     return count
