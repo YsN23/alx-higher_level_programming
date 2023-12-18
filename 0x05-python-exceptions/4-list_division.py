@@ -11,7 +11,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except IndexError:
             print("out of range")
             division_result = 0
-        except TypeError and ValueError:
+        except (TypeError, ValueError):
             print("wrong type")
             division_result = 0
         finally:
