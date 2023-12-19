@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square Class Validation Size"""
+"""Square Class Implementation to represent a square"""
 
 class Square:
     """Constructor method to initialize a Square object."""
