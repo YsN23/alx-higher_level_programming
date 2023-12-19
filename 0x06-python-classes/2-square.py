@@ -2,7 +2,7 @@
 """Square Class Validation Size"""
 
 class Square:
-    """Constructor and Private instance attribute"""
+    """Constructor method to initialize a Square object."""
     def __init__(self, size=0):
         self.__size = size
 
