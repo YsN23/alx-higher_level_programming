@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square Class Implementation to represent a square"""
 
+
 class Square:
     """Constructor method to initialize a Square object."""
     def __init__(self, size=0):
