@@ -2,14 +2,14 @@
 """Square Class Validation Size"""
 
 class Square:
-    """Private instance attribute"""
+    """Constructor and Private instance attribute"""
     def __init__(self, size=0):
         self.__size = size
 
-        if not isinstance(self.__size, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
-        if self.__size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
 
 my_square_1 = Square(3)
