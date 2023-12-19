@@ -5,6 +5,7 @@
 class Square:
     """Constructor method to initialize a Square object."""
     def __init__(self, size=0):
+        """Initializing Method"""
         self.__size = size
 
     @property
