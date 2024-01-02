@@ -1,0 +1,53 @@
+# Testing The Add Function
+
+'''
+add() function accepts only integers and floats Numbers, The function won't work
+	if the arguments are NoN-Numbers
+'''
+
+#Importing The Function From The Doctest1 file to Test it
+
+>>> from doctest1 import add
+
+'''Valid Cases'''
+
+# Add Positive Integers
+>>> add(5, 8)
+13
+
+#Add Negative Numbers
+>>> add(-7, -1)
+-8
+
+#Add Negative and Positive
+>>> add(-4, 1)
+-3
+
+#Add Two Positive Floating Numbers
+>>> add(2.12, 7.11)
+9
+
+#Add Two Negative Floating Numbers
+>>> add(-7.16, -3.11)
+-10
+
+#Add One Negative and One Positive
+>>> add(-8.091, 1.988)
+-7
+
+'''Invalid Cases'''
+
+#Add two chars
+>>> add('L', 'M')
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+#Add a Char with Number
+>>> add("M", 10)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+#Add a Number with Char
+>>> add(3, "L")
+Traceback (most recent call last):
+TypeError: b must be an integer
