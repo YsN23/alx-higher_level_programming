@@ -8,6 +8,7 @@ class Square:
         """Initializing Method"""
         self.__size = size
 
+
     def area(self):
         """Calculate and return the area of the square."""
         return self.__size ** 2
@@ -28,12 +29,15 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def my_print(self):
-        """Printing The Square like that "#" according to area"""
+        """Printing Method"""
         if self.__size == 0:
             print()
-
         else:
+            for not_space in range(self.__position[1]):
+                print("")
             for i in range(self.__size):
+                for space in range(self.__position[0]):
+                    print(" ", end="")
                 for j in range(self.__size):
-                    print("{}".format("#"), end="")
-                print()
+                    print("#", end="")
+                print("")
