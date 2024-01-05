@@ -80,11 +80,6 @@ class Rectangle:
         else:
             return rect_2
 
-    @classmethod
-    def square(cls, size=0):
-        """returns a new Rectangle"""
-        return cls(size, size)
-
     def __str__(self):
         square = ""
         if self.__width == 0 or self.__height == 0:
@@ -104,3 +99,8 @@ class Rectangle:
         """Destructor"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @classmethod
+    def square(cls, size=0):
+        """returns a new Rectangle"""
+        return cls(size, size)
