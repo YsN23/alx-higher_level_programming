@@ -1,11 +1,8 @@
 # Testing The Add Function
 
-'''
-add_integer() function accepts only integers and floats Numbers, The function won't work
-	if the arguments are NoN-Numbers
-'''
-
 >>> add_integer = __import__('0-add_integer').add_integer
+
+#Valid Cases
 
 >>> add_integer(1, 2)
 3
@@ -21,6 +18,8 @@ add_integer() function accepts only integers and floats Numbers, The function wo
 
 >>> add_integer(-2, 100.3)
 98
+
+#Edge Cases
 
 >>> add_integer(4, "School")
 Traceback (most recent call last):
