@@ -1,53 +1,102 @@
 # Testing The Add Function
 
 '''
-add() function accepts only integers and floats Numbers, The function won't work
+add_integer() function accepts only integers and floats Numbers, The function won't work
 	if the arguments are NoN-Numbers
 '''
 
 #Importing The Function From The Doctest1 file to Test it
 
->>> from doctest1 import add
+>>> add_integer = __import__('0-add_integer').add_integer
 
 '''Valid Cases'''
 
 # Add Positive Integers
->>> add(5, 8)
+>>> add_integer(5, 8)
 13
 
 #Add Negative Numbers
->>> add(-7, -1)
+>>> add_integer(-7, -1)
 -8
 
 #Add Negative and Positive
->>> add(-4, 1)
+>>> add_integer(-4, 1)
 -3
 
 #Add Two Positive Floating Numbers
->>> add(2.12, 7.11)
+>>> add_integer(2.12, 7.11)
 9
 
 #Add Two Negative Floating Numbers
->>> add(-7.16, -3.11)
+>>> add_integer(-7.16, -3.11)
 -10
 
 #Add One Negative and One Positive
->>> add(-8.091, 1.988)
+>>> add_integer(-8.091, 1.988)
 -7
+
+#Add Large Numbers
+>>> add_integer(2142109, 61727109)
+63869218
+
+#Add Mix Int and float
+>>> add_integer(4, 7.9)
+11
 
 '''Invalid Cases'''
 
 #Add two chars
->>> add('L', 'M')
+>>> add_integer('L', 'M')
 Traceback (most recent call last):
 TypeError: a must be an integer
 
 #Add a Char with Number
->>> add("M", 10)
+>>> add_integer("M", 10)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
 #Add a Number with Char
->>> add(3, "L")
+>>> add_integer(3, "L")
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+#Adding Texts
+>>> add_integer("leo", "messi")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+#Adding Texts with int casting
+>>> add_integer(int("leo"), int("messi"))
+Traceback (most recent call last):
+ValueError: invalid literal for int() with base 10: 'leo'
+
+#Adding Texts with float casting
+>>> add_integer(float("leo"), float("messi"))
+Traceback (most recent call last):
+ValueError: could not convert string to float: 'leo'
+
+#Adding a Number with Text int casting
+>>> add_integer(5, int("Messi"))
+Traceback (most recent call last):
+ValueError: invalid literal for int() with base 10: 'Messi'
+
+#Adding a Number with Text float casting
+>>> add_integer(5, float("Messi"))
+Traceback (most recent call last):
+ValueError: could not convert string to float: 'Messi'
+
+#Adding None with Number
+>>> add_integer(None, 6)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+#Nan case
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+#infinity case
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
