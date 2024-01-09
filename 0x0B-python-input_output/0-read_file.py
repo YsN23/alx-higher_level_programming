@@ -3,7 +3,7 @@
 
 
 def read_file(filename=""):
-
+    """Read a File and Print it to stdout"""
     with open(filename, 'r', encoding='utf-8') as f:
 
         content = f.read()
