@@ -1,2 +1,3 @@
 -- lists tables of a DATABASE
-SELECT * FROM mysql;
+USE mysql;
+SHOW TABLES;
